@@ -1,15 +1,39 @@
+/** @import { ESLint, Linter } from 'eslint' */
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import { fixupPluginRules } from '@eslint/compat';
+import { FlatCompat } from '@eslint/eslintrc';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import js from '@eslint/js';
-import ts from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
+import ts from 'typescript-eslint';
 
-/** @type {import('eslint').Linter.Config[]} */
+const compat = new FlatCompat({
+	baseDirectory: dirname(fileURLToPath(import.meta.url)),
+	recommendedConfig: js.configs.recommended,
+});
+
+/**
+ * @param {string} name
+ * @param {string} alias
+ * @returns {ESLint.Plugin}
+ */
+function legacyPlugin(name, alias) {
+	const plugin = compat.plugins(name)[0]?.plugins?.[alias];
+
+	return fixupPluginRules(/** @type {ESLint.Plugin} */ (plugin));
+}
+
+/** @type {Linter.Config[]} */
 export default [
 	js.configs.recommended,
-	...(/** @type {import('eslint').Linter.Config[]}} */ (ts.configs.recommended)),
+	...(/** @type {Linter.Config[]}} */ (ts.configs.recommended)),
+	...compat.extends('plugin:import/typescript'),
 	{
 		name: 'jrmajor/js',
 		plugins: {
 			'@stylistic': stylistic,
+			import: legacyPlugin('eslint-plugin-import', 'import'),
 		},
 		rules: {
 			'arrow-body-style': 'error',
@@ -118,6 +142,41 @@ export default [
 			'@stylistic/type-generic-spacing': 'error',
 			'@stylistic/type-named-tuple-spacing': 'error',
 			'@stylistic/yield-star-spacing': 'error',
+
+			// imports
+			'import/consistent-type-specifier-style': 'warn',
+			'import/export': 'error',
+			'import/exports-last': 'warn',
+			'import/extensions': 'warn',
+			'import/first': 'warn',
+			'import/group-exports': 'warn',
+			// considerComments handles comments after and between the same
+			'import/newline-after-import': 'warn',
+			'import/no-absolute-path': 'error',
+			'import/no-cycle': 'error',
+			'import/no-duplicates': 'warn',
+			'import/no-empty-named-blocks': 'warn',
+			'import/no-extraneous-dependencies': 'error',
+			'import/no-mutable-exports': 'error',
+			'import/no-relative-parent-imports': 'warn',
+			'import/no-self-import': 'error',
+			'import/no-useless-path-segments': 'warn',
+			'import/no-named-default': 'warn',
+			'import/order': ['warn', {
+				alphabetize: { order: 'asc' },
+				'newlines-between': 'never',
+				groups: [
+					'builtin',
+					'external',
+					'internal',
+					'unknown',
+					'parent',
+					'sibling',
+					'index',
+					'object',
+				],
+				warnOnUnassignedImports: true,
+			}],
 		},
 	},
 	{
