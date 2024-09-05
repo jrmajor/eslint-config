@@ -39,3 +39,36 @@ jobs:
 
       - name: Run ESLint
         run: npm run lint
+
+  integration:
+    name: Integration / ${{ matrix.project }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - arbor
+          - bajki-muza
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          path: eslint-config
+
+      - name: Checkout the other repo
+        uses: actions/checkout@v4
+        with:
+          repository: jrmajor/${{ matrix.project }}
+          path: integration
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+
+      - name: Install npm dependencies
+        working-directory: integration
+        run: yarn add -D ../eslint-config
+
+      - name: Run ESLint
+        continue-on-error: true
+        working-directory: integration
+        run: yarn run lint
