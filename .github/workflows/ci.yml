@@ -6,9 +6,7 @@ on:
 jobs:
   types:
     name: Types
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -26,9 +24,7 @@ jobs:
 
   lint:
     name: Lint
-
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
