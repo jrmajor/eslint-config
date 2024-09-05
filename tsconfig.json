@@ -1,12 +1,13 @@
 {
 	"compilerOptions": {
+		"noEmit": true,
+		"strict": true,
+		"allowJs": true,
+		"checkJs": true,
 		"target": "esnext",
 		"module": "esnext",
 		"moduleResolution": "bundler",
 		"esModuleInterop": true,
-		"strict": true,
-		"noEmit": true,
-		"allowJs": true,
-		"checkJs": true,
-	}
+		"skipLibCheck": true,
+	},
 }

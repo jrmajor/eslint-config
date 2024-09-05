@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  types:
+    name: Types
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          cache: npm
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Check types
+        run: npm run check
+
+  lint:
+    name: Lint
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          cache: npm
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Run ESLint
+        run: npm run lint
