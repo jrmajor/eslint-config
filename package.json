@@ -7,13 +7,17 @@
 	"type": "module",
 	"main": "src/index.js",
 	"types": "src/types.d.ts",
-	"files": ["src"],
+	"files": [
+		"src"
+	],
 	"scripts": {
 		"check": "tsc",
 		"check:watch": "tsc --watch",
-		"lint": "eslint . --max-warnings 0"
+		"lint": "eslint . --max-warnings 0",
+		"inspect-config": "eslint --inspect-config"
 	},
 	"devDependencies": {
+		"@eslint/config-inspector": "^0.5.4",
 		"@stylistic/eslint-plugin": "^2.7",
 		"@types/eslint": "^9.6",
 		"@types/eslint__js": "^8.42",
