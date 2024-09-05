@@ -7,6 +7,7 @@ export default [
 	js.configs.recommended,
 	...(/** @type {import('eslint').Linter.Config[]}} */ (ts.configs.recommended)),
 	{
+		name: 'jrmajor/js',
 		plugins: {
 			'@stylistic': stylistic,
 		},
@@ -120,6 +121,7 @@ export default [
 		},
 	},
 	{
+		name: 'jrmajor/ts',
 		rules: {
 			// seems broken, causes parse errors
 			'@typescript-eslint/no-unused-expressions': 'off',
@@ -138,6 +140,7 @@ export default [
 		},
 	},
 	{
+		name: 'jrmajor/ignores',
 		ignores: [
 			'vendor',
 			'vite.config.[jt]s.timestamp-*',

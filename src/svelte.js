@@ -5,6 +5,7 @@ import svelte from 'eslint-plugin-svelte';
 export default [
 	...svelte.configs['flat/recommended'],
 	{
+		name: 'jrmajor/svelte',
 		rules: {
 			'svelte/valid-compile': 'off',
 			'svelte/block-lang': ['error', { script: 'ts', style: 'postcss' }],
@@ -55,6 +56,7 @@ export default [
 		},
 	},
 	{
+		name: 'jrmajor/svelte-specific',
 		files: ['**/*.svelte'],
 		languageOptions: {
 			parserOptions: {
