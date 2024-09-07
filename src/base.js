@@ -145,7 +145,7 @@ export default [
 			// imports
 			'import/consistent-type-specifier-style': 'warn',
 			'import/export': 'error',
-			'import/extensions': ['warn', 'ignorePackages'],
+			'import/extensions': ['warn', 'ignorePackages', { ts: 'never' }],
 			'import/first': 'warn',
 			// considerComments handles comments after and between the same
 			'import/newline-after-import': 'warn',
@@ -182,6 +182,11 @@ export default [
 				pathGroupsExcludedImportTypes: ['builtin'],
 				warnOnUnassignedImports: true,
 			}],
+		},
+		settings: {
+			'import/resolver': {
+				typescript: {},
+			},
 		},
 	},
 	{
