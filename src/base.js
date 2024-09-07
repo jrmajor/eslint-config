@@ -47,7 +47,6 @@ export default [
 			'no-await-in-loop': 'error',
 			'no-console': 'error',
 			'no-constructor-return': 'error',
-			'no-duplicate-imports': 'error',
 			'no-else-return': 'error',
 			'no-implicit-coercion': ['error', { boolean: false }],
 			'no-implied-eval': 'error',
