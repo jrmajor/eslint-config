@@ -143,7 +143,6 @@ export default [
 			'@stylistic/yield-star-spacing': 'error',
 
 			// imports
-			'import/consistent-type-specifier-style': 'warn',
 			'import/export': 'error',
 			'import/extensions': ['warn', 'ignorePackages', { ts: 'never' }],
 			'import/first': 'warn',
