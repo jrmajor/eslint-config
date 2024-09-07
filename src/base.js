@@ -145,7 +145,7 @@ export default [
 			// imports
 			'import/consistent-type-specifier-style': 'warn',
 			'import/export': 'error',
-			'import/extensions': ['warn', 'always'],
+			'import/extensions': ['warn', 'ignorePackages'],
 			'import/first': 'warn',
 			// considerComments handles comments after and between the same
 			'import/newline-after-import': 'warn',
@@ -171,6 +171,15 @@ export default [
 					'index',
 					'object',
 				],
+				pathGroups: [
+					{ pattern: 'svelte', group: 'external', position: 'before' },
+					{ pattern: 'svelte/**', group: 'external', position: 'before' },
+					{ pattern: '@/types/**', group: 'internal', position: 'after' },
+					{ pattern: '@/helpers/**', group: 'internal', position: 'after' },
+					{ pattern: '@/Layouts/**', group: 'internal', position: 'after' },
+					{ pattern: '@/Components/**', group: 'internal', position: 'after' },
+				],
+				pathGroupsExcludedImportTypes: ['builtin'],
 				warnOnUnassignedImports: true,
 			}],
 		},
