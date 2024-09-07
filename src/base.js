@@ -147,7 +147,7 @@ export default [
 			'import/consistent-type-specifier-style': 'warn',
 			'import/export': 'error',
 			'import/exports-last': 'warn',
-			'import/extensions': 'warn',
+			'import/extensions': ['warn', 'always'],
 			'import/first': 'warn',
 			'import/group-exports': 'warn',
 			// considerComments handles comments after and between the same
