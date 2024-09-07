@@ -22,7 +22,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install npm dependencies
-        run: npm ci
+        run: npm ci --legacy-peer-deps
 
       - name: Publish release
         run: npm publish --provenance --access public
