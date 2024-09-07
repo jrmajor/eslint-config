@@ -145,7 +145,6 @@ export default [
 			// imports
 			'import/consistent-type-specifier-style': 'warn',
 			'import/export': 'error',
-			'import/exports-last': 'warn',
 			'import/extensions': ['warn', 'always'],
 			'import/first': 'warn',
 			// considerComments handles comments after and between the same
@@ -156,7 +155,6 @@ export default [
 			'import/no-empty-named-blocks': 'warn',
 			'import/no-extraneous-dependencies': 'error',
 			'import/no-mutable-exports': 'error',
-			'import/no-relative-parent-imports': 'warn',
 			'import/no-self-import': 'error',
 			'import/no-useless-path-segments': 'warn',
 			'import/no-named-default': 'warn',
