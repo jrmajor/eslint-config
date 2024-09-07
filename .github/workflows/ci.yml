@@ -71,4 +71,8 @@ jobs:
       - name: Run ESLint
         continue-on-error: true
         working-directory: integration
-        run: yarn run lint
+        run: yarn run lint --fix
+
+      - name: Show diff
+        working-directory: integration
+        run:  git diff --color=always -- . ':(exclude)package.*' ':(exclude)yarn.lock'
