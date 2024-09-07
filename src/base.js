@@ -149,7 +149,6 @@ export default [
 			'import/exports-last': 'warn',
 			'import/extensions': ['warn', 'always'],
 			'import/first': 'warn',
-			'import/group-exports': 'warn',
 			// considerComments handles comments after and between the same
 			'import/newline-after-import': 'warn',
 			'import/no-absolute-path': 'error',
