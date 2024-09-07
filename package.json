@@ -5,11 +5,15 @@
 	"author": "Jeremiasz Major <jrh.mjr@gmail.com>",
 	"repository": "jrmajor/eslint-config",
 	"type": "module",
-	"main": "src/index.js",
-	"types": "src/types.d.ts",
 	"files": [
 		"src"
 	],
+	"exports": {
+		".": {
+			"default": "./src/index.js",
+			"types": "./src/types.d.ts"
+		}
+	},
 	"scripts": {
 		"check": "tsc",
 		"check:watch": "tsc --watch",
