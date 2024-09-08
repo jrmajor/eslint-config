@@ -1,6 +1,6 @@
 {
 	"name": "@jrmajor/eslint-config",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"license": "MIT",
 	"author": "Jeremiasz Major <jrh.mjr@gmail.com>",
 	"repository": "jrmajor/eslint-config",
