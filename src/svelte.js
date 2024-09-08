@@ -8,7 +8,7 @@ export default [
 		name: 'jrmajor/svelte',
 		rules: {
 			'svelte/valid-compile': 'off',
-			'svelte/block-lang': ['error', { script: 'ts', style: 'postcss' }],
+			'svelte/block-lang': ['error', { script: 'ts', style: null }],
 			'svelte/no-at-html-tags': 'off',
 			'svelte/no-dupe-use-directives': 'error',
 			'svelte/no-ignored-unsubscribe': 'error',
