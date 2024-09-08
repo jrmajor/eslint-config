@@ -12,30 +12,30 @@ export default [
 			'svelte/no-at-html-tags': 'off',
 			'svelte/no-dupe-use-directives': 'error',
 			'svelte/no-ignored-unsubscribe': 'error',
-			'svelte/no-useless-mustaches': 'error',
+			'svelte/no-useless-mustaches': 'warn',
 			'svelte/require-optimized-style-attribute': 'error',
 			'svelte/valid-each-key': 'error',
 			'svelte/valid-prop-names-in-kit-pages': 'error',
 
 			// stylistic
 			'svelte/derived-has-same-inputs-outputs': 'error',
-			'svelte/first-attribute-linebreak': 'error',
-			'svelte/html-closing-bracket-spacing': ['error', {
+			'svelte/first-attribute-linebreak': 'warn',
+			'svelte/html-closing-bracket-spacing': ['warn', {
 				startTag: 'never',
 				endTag: 'never',
 				selfClosingTag: 'never',
 			}],
-			'svelte/html-quotes': 'error',
+			'svelte/html-quotes': 'warn',
 			// todo: https://github.com/sveltejs/eslint-plugin-svelte/issues/837
 			// 'svelte/html-self-closing': ['error', { void: 'never', normal: 'never' }],
-			'svelte/max-attributes-per-line': ['error', { singleline: 8 }],
+			'svelte/max-attributes-per-line': ['warn', { singleline: 8 }],
 			'svelte/mustache-spacing': 'off', // false positives
-			'svelte/no-spaces-around-equal-signs-in-attribute': 'error',
+			'svelte/no-spaces-around-equal-signs-in-attribute': 'warn',
 			'svelte/prefer-class-directive': 'error',
 			'svelte/prefer-style-directive': 'error',
 			'svelte/shorthand-attribute': 'off', // false positives
-			'svelte/shorthand-directive': 'error',
-			'svelte/sort-attributes': ['error', {
+			'svelte/shorthand-directive': 'warn',
+			'svelte/sort-attributes': ['warn', {
 				order: [
 					'this',
 					'bind:this',
@@ -52,7 +52,7 @@ export default [
 					'/^--/u', // --style-props
 				],
 			}],
-			'svelte/spaced-html-comment': 'error',
+			'svelte/spaced-html-comment': 'warn',
 		},
 	},
 	{
@@ -69,9 +69,9 @@ export default [
 		rules: {
 			'@stylistic/indent': 'off',
 			'@stylistic/indent-binary-ops': 'off',
-			'svelte/indent': ['error', { indent: 'tab', alignAttributesVertically: true }],
+			'svelte/indent': ['warn', { indent: 'tab', alignAttributesVertically: true }],
 			'@stylistic/no-trailing-spaces': 'off',
-			'svelte/no-trailing-spaces': 'error',
+			'svelte/no-trailing-spaces': 'warn',
 		},
 	},
 ];
