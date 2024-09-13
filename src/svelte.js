@@ -26,8 +26,7 @@ export default [
 				selfClosingTag: 'never',
 			}],
 			'svelte/html-quotes': 'warn',
-			// todo: https://github.com/sveltejs/eslint-plugin-svelte/issues/837
-			// 'svelte/html-self-closing': ['error', { void: 'never', normal: 'never' }],
+			'svelte/html-self-closing': ['warn', { void: 'never', normal: 'never' }],
 			'svelte/max-attributes-per-line': ['warn', { singleline: 8 }],
 			'svelte/mustache-spacing': 'off', // false positives
 			'svelte/no-spaces-around-equal-signs-in-attribute': 'warn',
