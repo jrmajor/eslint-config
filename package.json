@@ -27,12 +27,12 @@
 	"devDependencies": {
 		"@eslint/config-inspector": "^0.5.4",
 		"@stylistic/eslint-plugin": "^2.7",
-		"@types/node": "^22.5",
+		"@types/node": "^22.13",
 		"eslint": "^9.22",
 		"eslint-plugin-svelte": "^2.44",
 		"globals": "^15.9",
-		"typescript": "^5.5",
-		"typescript-eslint": "^8.4"
+		"typescript": "^5.8",
+		"typescript-eslint": "^8.26"
 	},
 	"peerDependencies": {
 		"@stylistic/eslint-plugin": ">= 2.7 < 3",
