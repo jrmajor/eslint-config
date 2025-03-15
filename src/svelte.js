@@ -7,7 +7,6 @@ export default defineConfig([
 	{
 		name: 'jrmajor/svelte',
 		rules: {
-			'svelte/valid-compile': 'off',
 			'svelte/block-lang': ['error', { script: 'ts', style: null }],
 			'svelte/no-at-html-tags': 'off',
 			'svelte/no-dupe-use-directives': 'error',
@@ -26,7 +25,7 @@ export default defineConfig([
 				selfClosingTag: 'never',
 			}],
 			'svelte/html-quotes': 'warn',
-			'svelte/html-self-closing': ['warn', { void: 'never', normal: 'never' }],
+			'svelte/html-self-closing': ['warn', { void: 'never' }],
 			'svelte/max-attributes-per-line': ['warn', { singleline: 8 }],
 			'svelte/mustache-spacing': 'off', // false positives
 			'svelte/no-spaces-around-equal-signs-in-attribute': 'warn',
