@@ -17,6 +17,10 @@ export default [
 			'@stylistic': stylistic,
 			import: importPlugin,
 		},
+		linterOptions: {
+			reportUnusedInlineConfigs: 'warn',
+			reportUnusedDisableDirectives: 'warn',
+		},
 		rules: {
 			'arrow-body-style': 'warn',
 			'block-scoped-var': 'error',
@@ -42,6 +46,7 @@ export default [
 			'no-underscore-dangle': 'error',
 			'no-unneeded-ternary': 'warn',
 			'no-useless-concat': 'warn',
+			'no-useless-constructor': 'warn',
 			'no-useless-rename': 'error',
 			'no-useless-return': 'warn',
 			'no-var': 'error',
