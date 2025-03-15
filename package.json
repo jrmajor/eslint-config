@@ -49,5 +49,9 @@
 		"eslint-plugin-svelte": {
 			"optional": true
 		}
+	},
+	"volta": {
+		"node": "22.14.0",
+		"npm": "11.2.0"
 	}
 }
