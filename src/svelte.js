@@ -56,9 +56,11 @@ export default defineConfig([
 	},
 	{
 		name: 'jrmajor/svelte-specific',
-		files: ['**/*.svelte'],
+		files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
 		languageOptions: {
 			parserOptions: {
+				projectService: true,
+				extraFileExtensions: ['.svelte'],
 				parser: ts.parser,
 				svelteFeatures: {
 					experimentalGenerics: true,
