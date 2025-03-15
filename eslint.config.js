@@ -1,8 +1,8 @@
+import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import base from './src/base.js';
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
+export default defineConfig([
 	...base,
 	{
 		languageOptions: {
@@ -12,4 +12,4 @@ export default [
 			'import/extensions': 'off',
 		},
 	},
-];
+]);

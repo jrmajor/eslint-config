@@ -1,15 +1,14 @@
-/** @import { Linter } from 'eslint' */
 // eslint-disable-next-line import/no-extraneous-dependencies
 import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
+import { defineConfig, globalIgnores } from 'eslint/config';
 // @ts-expect-error
 import importPlugin from 'eslint-plugin-import';
 import ts from 'typescript-eslint';
 
-/** @type {Linter.Config[]} */
-export default [
+export default defineConfig([
 	js.configs.recommended,
-	...ts.configs.recommended,
+	ts.configs.recommended,
 	importPlugin.flatConfigs.typescript,
 	{
 		name: 'jrmajor/js',
@@ -194,11 +193,8 @@ export default [
 			'@typescript-eslint/prefer-function-type': 'warn',
 		},
 	},
-	{
-		name: 'jrmajor/ignores',
-		ignores: [
-			'vendor',
-			'vite.config.[jt]s.timestamp-*',
-		],
-	},
-];
+	globalIgnores([
+		'vendor',
+		'vite.config.[jt]s.timestamp-*',
+	], 'jrmajor/ignores'),
+]);

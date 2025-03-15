@@ -1,8 +1,8 @@
+import { defineConfig } from 'eslint/config';
 import svelte from 'eslint-plugin-svelte';
 import ts from 'typescript-eslint';
 
-/** @type {import('eslint').Linter.Config[]} */
-export default [
+export default defineConfig([
 	...svelte.configs['flat/recommended'],
 	{
 		name: 'jrmajor/svelte',
@@ -73,4 +73,4 @@ export default [
 			'svelte/no-trailing-spaces': 'warn',
 		},
 	},
-];
+]);
