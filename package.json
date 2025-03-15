@@ -21,10 +21,8 @@
 		"inspect-config": "eslint --inspect-config"
 	},
 	"dependencies": {
-		"@eslint/compat": "^1.1.1",
-		"@eslint/eslintrc": "^3.1.0",
-		"eslint-import-resolver-typescript": "^3.6.3",
-		"eslint-plugin-import": "^2.30.0"
+		"eslint-import-resolver-typescript": "^3.9.0",
+		"eslint-plugin-import": "^2.31.0"
 	},
 	"devDependencies": {
 		"@eslint/config-inspector": "^0.5.4",

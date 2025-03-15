@@ -1,39 +1,21 @@
-/** @import { ESLint, Linter } from 'eslint' */
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-import { fixupPluginRules } from '@eslint/compat';
-import { FlatCompat } from '@eslint/eslintrc';
+/** @import { Linter } from 'eslint' */
 // eslint-disable-next-line import/no-extraneous-dependencies
 import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
+// @ts-expect-error
+import importPlugin from 'eslint-plugin-import';
 import ts from 'typescript-eslint';
-
-const compat = new FlatCompat({
-	baseDirectory: dirname(fileURLToPath(import.meta.url)),
-	recommendedConfig: js.configs.recommended,
-});
-
-/**
- * @param {string} name
- * @param {string} alias
- * @returns {ESLint.Plugin}
- */
-function legacyPlugin(name, alias) {
-	const plugin = compat.plugins(name)[0]?.plugins?.[alias];
-
-	return fixupPluginRules(/** @type {ESLint.Plugin} */ (plugin));
-}
 
 /** @type {Linter.Config[]} */
 export default [
 	js.configs.recommended,
-	...(/** @type {Linter.Config[]}} */ (ts.configs.recommended)),
-	...compat.extends('plugin:import/typescript'),
+	...ts.configs.recommended,
+	importPlugin.flatConfigs.typescript,
 	{
 		name: 'jrmajor/js',
 		plugins: {
 			'@stylistic': stylistic,
-			import: legacyPlugin('eslint-plugin-import', 'import'),
+			import: importPlugin,
 		},
 		rules: {
 			'arrow-body-style': 'warn',
