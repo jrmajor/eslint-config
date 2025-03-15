@@ -66,7 +66,7 @@ jobs:
 
       - name: Install npm dependencies
         working-directory: integration
-        run: yarn add -D ../eslint-config && yarn upgrade
+        run: yarn add -D ../eslint-config && yarn upgrade && yarn add -D eslint-plugin-svelte@3
 
       - name: Run ESLint
         continue-on-error: true
