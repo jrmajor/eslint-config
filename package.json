@@ -32,13 +32,13 @@
 		"eslint-plugin-svelte": "^2.44",
 		"globals": "^15.9",
 		"typescript": "^5.5",
-		"typescript-eslint": "^8.4"
+		"typescript-eslint": "^8.26"
 	},
 	"peerDependencies": {
 		"@stylistic/eslint-plugin": ">= 2.7 < 3",
 		"eslint": ">= 9.22 < 10",
 		"eslint-plugin-svelte": ">= 2.43 < 3",
-		"typescript-eslint": ">= 8.4 < 9"
+		"typescript-eslint": ">= 8.26 < 9"
 	},
 	"peerDependenciesMeta": {
 		"eslint-plugin-svelte": {
