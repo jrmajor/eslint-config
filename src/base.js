@@ -110,7 +110,7 @@ export default defineConfig([
 			'@stylistic/operator-linebreak': ['warn', 'before'],
 			'@stylistic/padded-blocks': ['warn', 'never'],
 			'@stylistic/quote-props': ['warn', 'as-needed'],
-			'@stylistic/quotes': ['warn', 'single'],
+			'@stylistic/quotes': ['warn', 'single', { avoidEscape: true }],
 			'@stylistic/rest-spread-spacing': 'warn',
 			'@stylistic/semi': 'warn',
 			'@stylistic/semi-spacing': 'warn',
