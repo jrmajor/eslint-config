@@ -21,24 +21,21 @@
 		"inspect-config": "eslint --inspect-config"
 	},
 	"dependencies": {
+		"@stylistic/eslint-plugin": "^4.2",
 		"eslint-import-resolver-typescript": "^3.9.0",
-		"eslint-plugin-import": "^2.31.0"
+		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-svelte": "^3.1",
+		"typescript-eslint": "^8.26"
 	},
 	"devDependencies": {
 		"@eslint/config-inspector": "^0.5.4",
-		"@stylistic/eslint-plugin": "^4.2",
 		"@types/node": "^22.5",
 		"eslint": "^9.22",
-		"eslint-plugin-svelte": "^3.1",
 		"globals": "^15.9",
-		"typescript": "^5.5",
-		"typescript-eslint": "^8.26"
+		"typescript": "^5.5"
 	},
 	"peerDependencies": {
-		"@stylistic/eslint-plugin": ">= 4.2 < 5",
-		"eslint": ">= 9.22 < 10",
-		"eslint-plugin-svelte": ">= 3.1 < 4",
-		"typescript-eslint": ">= 8.26 < 9"
+		"eslint": ">= 9.22 < 10"
 	},
 	"peerDependenciesMeta": {
 		"eslint-plugin-svelte": {
