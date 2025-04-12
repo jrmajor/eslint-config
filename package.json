@@ -21,6 +21,7 @@
 		"inspect-config": "eslint --inspect-config"
 	},
 	"dependencies": {
+		"@eslint/js": "^9.24",
 		"@stylistic/eslint-plugin": "^4.2",
 		"eslint-import-resolver-typescript": "^3.9.0",
 		"eslint-plugin-import": "^2.31.0",
