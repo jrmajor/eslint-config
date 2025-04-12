@@ -74,6 +74,7 @@ export default defineConfig([
 			'@stylistic/comma-spacing': 'warn',
 			'@stylistic/comma-style': 'warn',
 			'@stylistic/computed-property-spacing': 'warn',
+			'@stylistic/curly-newline': ['warn', 'always'],
 			'@stylistic/dot-location': ['warn', 'property'],
 			'@stylistic/eol-last': 'warn',
 			'@stylistic/func-call-spacing': 'warn',

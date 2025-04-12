@@ -26,7 +26,7 @@
 	},
 	"devDependencies": {
 		"@eslint/config-inspector": "^0.5.4",
-		"@stylistic/eslint-plugin": "^2.7",
+		"@stylistic/eslint-plugin": "^2.13",
 		"@types/node": "^22.5",
 		"eslint": "^9.22",
 		"eslint-plugin-svelte": "^3.1",
@@ -35,7 +35,7 @@
 		"typescript-eslint": "^8.26"
 	},
 	"peerDependencies": {
-		"@stylistic/eslint-plugin": ">= 2.7 < 3",
+		"@stylistic/eslint-plugin": ">= 2.13 < 3",
 		"eslint": ">= 9.22 < 10",
 		"eslint-plugin-svelte": ">= 3.1 < 4",
 		"typescript-eslint": ">= 8.26 < 9"
