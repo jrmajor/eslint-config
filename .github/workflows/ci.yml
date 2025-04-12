@@ -61,18 +61,23 @@ jobs:
           repository: jrmajor/${{ matrix.project }}
           path: integration
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          package_json_file: integration/package.json
+
       - name: Setup Node
         uses: actions/setup-node@v4
 
       - name: Install npm dependencies
         working-directory: integration
-        run: yarn add -D ../eslint-config && yarn upgrade eslint
+        run: pnpm add -D ../eslint-config && pnpm upgrade eslint
 
       - name: Run ESLint
         continue-on-error: true
         working-directory: integration
-        run: yarn run lint --fix
+        run: pnpm lint --fix
 
       - name: Show diff
         working-directory: integration
-        run:  git diff --color=always -- . ':(exclude)package.*' ':(exclude)yarn.lock'
+        run:  git diff --color=always -- . ':(exclude)package.json' ':(exclude)pnpm-lock.yaml'
