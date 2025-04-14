@@ -146,6 +146,7 @@ export default defineConfig([
 			'import-x/no-named-default': 'warn',
 			'import-x/order': ['warn', {
 				alphabetize: { order: 'asc' },
+				named: { enabled: true, types: 'types-last' },
 				'newlines-between': 'never',
 				groups: [
 					'builtin',
