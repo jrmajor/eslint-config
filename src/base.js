@@ -1,19 +1,20 @@
 import js from '@eslint/js';
 import stylistic from '@stylistic/eslint-plugin';
 import { defineConfig, globalIgnores } from 'eslint/config';
-// @ts-expect-error
-import importPlugin from 'eslint-plugin-import';
+import { createNextImportResolver } from 'eslint-import-resolver-next';
+import importX from 'eslint-plugin-import-x';
 import ts from 'typescript-eslint';
 
 export default defineConfig([
 	js.configs.recommended,
+	// @ts-expect-error
 	ts.configs.recommended,
-	importPlugin.flatConfigs.typescript,
+	// @ts-expect-error
+	importX.flatConfigs.typescript,
 	{
 		name: 'jrmajor/js',
 		plugins: {
 			'@stylistic': stylistic,
-			import: importPlugin,
 		},
 		linterOptions: {
 			reportUnusedInlineConfigs: 'warn',
@@ -129,21 +130,21 @@ export default defineConfig([
 			'@stylistic/yield-star-spacing': 'warn',
 
 			// imports
-			'import/export': 'error',
-			'import/extensions': ['warn', 'ignorePackages', { ts: 'never' }],
-			'import/first': 'warn',
+			'import-x/export': 'error',
+			'import-x/extensions': ['warn', 'ignorePackages', { ts: 'never' }],
+			'import-x/first': 'warn',
 			// considerComments handles comments after and between the same
-			'import/newline-after-import': 'warn',
-			'import/no-absolute-path': 'error',
-			'import/no-cycle': 'error',
-			'import/no-duplicates': 'warn',
-			'import/no-empty-named-blocks': 'warn',
-			'import/no-extraneous-dependencies': 'error',
-			'import/no-mutable-exports': 'error',
-			'import/no-self-import': 'error',
-			'import/no-useless-path-segments': 'warn',
-			'import/no-named-default': 'warn',
-			'import/order': ['warn', {
+			'import-x/newline-after-import': 'warn',
+			'import-x/no-absolute-path': 'error',
+			'import-x/no-cycle': 'error',
+			'import-x/no-duplicates': 'warn',
+			'import-x/no-empty-named-blocks': 'warn',
+			'import-x/no-extraneous-dependencies': 'error',
+			'import-x/no-mutable-exports': 'error',
+			'import-x/no-self-import': 'error',
+			'import-x/no-useless-path-segments': 'warn',
+			'import-x/no-named-default': 'warn',
+			'import-x/order': ['warn', {
 				alphabetize: { order: 'asc' },
 				'newlines-between': 'never',
 				groups: [
@@ -169,9 +170,7 @@ export default defineConfig([
 			}],
 		},
 		settings: {
-			'import/resolver': {
-				typescript: {},
-			},
+			'import-x/resolver-next': [createNextImportResolver()],
 		},
 	},
 	{
