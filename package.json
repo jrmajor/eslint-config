@@ -22,19 +22,19 @@
 		"inspect-config": "eslint --inspect-config"
 	},
 	"dependencies": {
-		"@eslint/js": "^9.24",
+		"@eslint/js": "^9.25",
 		"@stylistic/eslint-plugin": "^4.2",
 		"eslint-import-resolver-next": "^0.5.0",
-		"eslint-plugin-import-x": "^4.10.3",
-		"eslint-plugin-svelte": "^3.1",
-		"typescript-eslint": "^8.29"
+		"eslint-plugin-import-x": "^4.11.0",
+		"eslint-plugin-svelte": "^3.5",
+		"typescript-eslint": "^8.31"
 	},
 	"devDependencies": {
 		"@eslint/config-inspector": "^0.5.4",
-		"@types/node": "^22.5",
-		"eslint": "^9.24",
+		"@types/node": "^22.15",
+		"eslint": "^9.25",
 		"globals": "^15.9",
-		"typescript": "^5.5"
+		"typescript": "^5.8"
 	},
 	"peerDependencies": {
 		"eslint": ">= 9.24 < 10"
