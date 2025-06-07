@@ -5,7 +5,7 @@
 	"author": "Jeremiasz Major <jrh.mjr@gmail.com>",
 	"repository": "jrmajor/eslint-config",
 	"type": "module",
-	"packageManager": "pnpm@10.8.0",
+	"packageManager": "pnpm@10.11.1",
 	"files": [
 		"src"
 	],
@@ -45,7 +45,7 @@
 		}
 	},
 	"volta": {
-		"node": "22.14.0",
-		"pnpm": "10.8.0"
+		"node": "22.16.0",
+		"pnpm": "10.11.1"
 	}
 }
