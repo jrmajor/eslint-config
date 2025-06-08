@@ -8,9 +8,11 @@ export default defineConfig([
 		name: 'jrmajor/svelte',
 		rules: {
 			'svelte/block-lang': ['error', { script: 'ts', style: null }],
+			'svelte/no-add-event-listener': 'error',
 			'svelte/no-at-html-tags': 'off',
 			'svelte/no-dupe-use-directives': 'error',
 			'svelte/no-ignored-unsubscribe': 'error',
+			'svelte/no-top-level-browser-globals': 'error',
 			'svelte/no-useless-mustaches': 'warn',
 			'svelte/require-optimized-style-attribute': 'error',
 			'svelte/valid-each-key': 'error',
@@ -38,6 +40,7 @@ export default defineConfig([
 				order: [
 					'this',
 					'bind:this',
+					'@attach',
 					'/^use:/u',
 					{ match: ['!/^(?:this|bind:this|use:)$/u'], sort: 'ignore' },
 					'/^transition:/u',
