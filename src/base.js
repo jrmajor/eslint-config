@@ -27,7 +27,7 @@ export default defineConfig([
 			'default-param-last': 'error',
 			'dot-notation': 'warn',
 			'func-names': ['warn', 'as-needed'],
-			'func-style': ['warn', 'declaration'],
+			'func-style': ['warn', 'declaration', { allowTypeAnnotation: true }],
 			'grouped-accessor-pairs': 'warn',
 			'no-await-in-loop': 'error',
 			'no-console': 'warn',
@@ -42,8 +42,10 @@ export default defineConfig([
 			'no-negated-condition': 'warn',
 			'no-shadow-restricted-names': 'error',
 			'no-throw-literal': 'error',
+			'no-unassigned-vars': 'warn',
 			'no-underscore-dangle': 'error',
 			'no-unneeded-ternary': 'warn',
+			'no-unused-expressions': ['warn', { allowTernary: true }],
 			'no-useless-concat': 'warn',
 			'no-useless-constructor': 'warn',
 			'no-useless-rename': 'error',
@@ -178,12 +180,12 @@ export default defineConfig([
 	{
 		name: 'jrmajor/ts',
 		rules: {
-			// seems broken, causes parse errors
+			// eslint base rule now handles ts syntax
 			'@typescript-eslint/no-unused-expressions': 'off',
 
 			// disable some defaults
-			'@typescript-eslint/no-explicit-any': 'off',
 			'@typescript-eslint/ban-ts-comment': 'off',
+			'@typescript-eslint/no-explicit-any': 'off',
 
 			// stylistic
 			'@typescript-eslint/array-type': ['warn', { default: 'array-simple', readonly: 'array-simple' }],
