@@ -93,7 +93,7 @@ export default defineConfig([
 			'@stylistic/lines-around-comment': 'warn',
 			'@stylistic/lines-between-class-members': ['warn', 'always', { exceptAfterSingleLine: true }],
 			'@stylistic/max-statements-per-line': 'warn',
-			'@stylistic/member-delimiter-style': 'warn',
+			'@stylistic/member-delimiter-style': ['warn', { singleline: { delimiter: 'comma' } }],
 			'@stylistic/multiline-comment-style': ['warn', 'separate-lines'],
 			'@stylistic/multiline-ternary': ['warn', 'always-multiline'],
 			'@stylistic/new-parens': 'warn',
@@ -138,7 +138,8 @@ export default defineConfig([
 			// considerComments handles comments after and between the same
 			'import-x/newline-after-import': 'warn',
 			'import-x/no-absolute-path': 'error',
-			'import-x/no-cycle': 'error',
+			// causes parse errors in svelte plugin
+			'import-x/no-cycle': 'off',
 			// broken for svelte subpackages
 			'import-x/no-duplicates': 'off',
 			'import-x/no-empty-named-blocks': 'warn',
