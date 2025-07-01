@@ -23,7 +23,7 @@
 	},
 	"dependencies": {
 		"@eslint/js": "^9.28",
-		"@stylistic/eslint-plugin": "^4.4",
+		"@stylistic/eslint-plugin": "^5.1",
 		"eslint-import-resolver-next": "^0.6.0",
 		"eslint-plugin-import-x": "^4.15.1",
 		"eslint-plugin-svelte": "^3.9",
