@@ -6,8 +6,18 @@ updates:
     schedule:
       interval: monthly
     groups:
+      eslint:
+        patterns: [eslint, '@eslint/js']
       npm:
         update-types: [minor, patch]
+        exclude-patterns:
+          - typescript-eslint
+          - '@stylistic/eslint-plugin'
+          - eslint-plugin-import-x
+          - eslint-plugin-svelte
+    ignore:
+      - dependency-name: '@types/node'
+        update-types: [version-update:semver-major]
     versioning-strategy: increase
 
   - package-ecosystem: github-actions
