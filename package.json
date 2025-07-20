@@ -44,11 +44,6 @@
 			"optional": true
 		}
 	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"esbuild"
-		]
-	},
 	"volta": {
 		"node": "22.16.0",
 		"pnpm": "10.11.1"
