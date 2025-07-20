@@ -39,11 +39,6 @@
 	"peerDependencies": {
 		"eslint": ">= 9.31 < 10"
 	},
-	"peerDependenciesMeta": {
-		"eslint-plugin-svelte": {
-			"optional": true
-		}
-	},
 	"devEngines": {
 		"packageManager": {
 			"name": "pnpm",
