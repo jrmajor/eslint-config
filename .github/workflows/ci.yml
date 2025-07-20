@@ -76,9 +76,6 @@ jobs:
         with:
           package_json_file: integration/package.json
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-
       - name: Install npm dependencies
         working-directory: integration
         run: pnpm add -D file:../eslint-config && pnpm upgrade eslint
