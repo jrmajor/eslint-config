@@ -3,7 +3,7 @@ import svelte from 'eslint-plugin-svelte';
 import ts from 'typescript-eslint';
 
 export default defineConfig([
-	...svelte.configs['flat/recommended'],
+	svelte.configs['flat/recommended'],
 	{
 		name: 'jrmajor/svelte',
 		rules: {

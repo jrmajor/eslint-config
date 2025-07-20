@@ -1,9 +1,9 @@
 import { defineConfig } from 'eslint/config';
 import globals from 'globals';
-import base from './src/base.js';
+import base from '@jrmajor/eslint-config';
 
 export default defineConfig([
-	...base,
+	base,
 	{
 		languageOptions: {
 			globals: globals.node,
