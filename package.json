@@ -22,7 +22,7 @@
 		"inspect-config": "eslint --inspect-config"
 	},
 	"dependencies": {
-		"@eslint/js": "^9.28",
+		"@eslint/js": "^9.31",
 		"@stylistic/eslint-plugin": "^4.4",
 		"eslint-import-resolver-next": "^0.6.0",
 		"eslint-plugin-import-x": "^4.15.1",
@@ -32,7 +32,7 @@
 	"devDependencies": {
 		"@eslint/config-inspector": "^0.5.4",
 		"@types/node": "^22.15",
-		"eslint": "^9.28",
+		"eslint": "^9.31",
 		"globals": "^15.9",
 		"typescript": "^5.8"
 	},
