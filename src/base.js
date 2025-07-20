@@ -199,6 +199,7 @@ export default defineConfig([
 	},
 	globalIgnores([
 		'vendor',
+		'rolldown.config.*.js',
 		'vite.config.[jt]s.timestamp-*',
 	], 'jrmajor/ignores'),
 ]);
