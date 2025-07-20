@@ -79,7 +79,6 @@ export default defineConfig([
 			'@stylistic/curly-newline': ['warn', 'always'],
 			'@stylistic/dot-location': ['warn', 'property'],
 			'@stylistic/eol-last': 'warn',
-			'@stylistic/func-call-spacing': 'warn',
 			'@stylistic/function-call-argument-newline': ['warn', 'consistent'],
 			'@stylistic/function-call-spacing': 'warn',
 			'@stylistic/function-paren-newline': ['warn', 'consistent'],
