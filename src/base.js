@@ -33,6 +33,7 @@ export default defineConfig([
 			'no-console': 'warn',
 			'no-constructor-return': 'error',
 			'no-else-return': 'warn',
+			'no-empty': ['warn', { allowEmptyCatch: true }],
 			'no-global-assign': 'error',
 			'no-implicit-coercion': ['error', { boolean: false }],
 			'no-implied-eval': 'error',
