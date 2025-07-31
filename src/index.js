@@ -2,6 +2,8 @@
 
 export { default } from './base.js';
 
+export { default as js } from './js/index.js';
+
 /** @type {import('eslint').Linter.Config[]} */
 let svelte;
 

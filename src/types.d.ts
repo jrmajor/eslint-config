@@ -4,5 +4,6 @@ declare module '@jrmajor/eslint-config' {
 	const base: Linter.Config[];
 
 	export default base;
+	export const js: Linter.Config[];
 	export const svelte: Linter.Config[];
 }
