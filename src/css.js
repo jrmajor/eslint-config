@@ -9,7 +9,7 @@ export default defineConfig([
 		language: 'css/css',
 		plugins: { css },
 		languageOptions: {
-			syntax: tailwind4,
+			customSyntax: tailwind4,
 		},
 		extends: [css.configs.recommended],
 		rules: {
