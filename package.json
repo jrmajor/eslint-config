@@ -23,18 +23,18 @@
 	},
 	"dependencies": {
 		"@eslint/css": "^0.10.0",
-		"@eslint/js": "^9.31",
+		"@eslint/js": "^9.32",
 		"@stylistic/eslint-plugin": "^5.2",
 		"eslint-import-resolver-next": "^0.6.0",
 		"eslint-plugin-import-x": "^4.16",
 		"eslint-plugin-svelte": "^3.11",
 		"tailwind-csstree": "^0.1.2",
-		"typescript-eslint": "^8.37"
+		"typescript-eslint": "^8.38"
 	},
 	"devDependencies": {
 		"@eslint/config-inspector": "^1.1",
-		"@types/node": "^22.16",
-		"eslint": "^9.31",
+		"@types/node": "^22.17",
+		"eslint": "^9.32",
 		"globals": "^16.3",
 		"svelte": "*",
 		"typescript": "^5.8"
