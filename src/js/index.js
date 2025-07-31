@@ -7,6 +7,15 @@ import { tsConfig } from './ts.js';
 export default defineConfig([
 	{
 		name: 'jrmajor/js',
+		files: [
+			'**/*.js',
+			'**/*.cjs',
+			'**/*.mjs',
+			'**/*.ts',
+			'**/*.cts',
+			'**/*.mts',
+			'**/*.svelte',
+		],
 		extends: [
 			jsConfig,
 			tsConfig,

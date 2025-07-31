@@ -3,9 +3,10 @@ import svelte from 'eslint-plugin-svelte';
 import ts from 'typescript-eslint';
 
 export default defineConfig([
-	svelte.configs['flat/recommended'],
 	{
 		name: 'jrmajor/svelte',
+		files: ['**/*.svelte', '**/*.svelte.ts', '**/*.svelte.js'],
+		extends: [svelte.configs['flat/recommended']],
 		rules: {
 			'svelte/block-lang': ['error', { script: 'ts', style: null }],
 			'svelte/no-add-event-listener': 'error',
