@@ -5,6 +5,17 @@ export { default } from './base.js';
 export { default as js } from './js/index.js';
 
 /** @type {import('eslint').Linter.Config[]} */
+let css;
+
+// @ts-expect-error
+css = '@eslint/css must be installed to import { css } from @jrmajor/eslint-config';
+try {
+	await import('@eslint/css');
+	css = (await import('./css.js')).default;
+} catch {
+}
+
+/** @type {import('eslint').Linter.Config[]} */
 let svelte;
 
 // @ts-expect-error
@@ -15,4 +26,4 @@ try {
 } catch {
 }
 
-export { svelte };
+export { css, svelte };
