@@ -24,7 +24,7 @@
 	"dependencies": {
 		"@eslint/css": "^0.10.0",
 		"@eslint/js": "^9.32",
-		"@stylistic/eslint-plugin": "^5.2",
+		"@stylistic/eslint-plugin": "^5.3",
 		"eslint-import-resolver-next": "^0.6.0",
 		"eslint-plugin-import-x": "^4.16",
 		"eslint-plugin-svelte": "^3.11",
