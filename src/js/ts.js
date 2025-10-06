@@ -5,7 +5,6 @@ import { jsConfig } from './js.js';
 export const tsConfig = defineConfig({
 	name: 'ts',
 	extends: [
-		// @ts-expect-error
 		ts.configs.recommended,
 	],
 	rules: {
