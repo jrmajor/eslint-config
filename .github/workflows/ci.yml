@@ -74,7 +74,7 @@ jobs:
 
       - name: Install npm dependencies
         working-directory: integration
-        run: pnpm add -D file:../eslint-config && pnpm upgrade eslint
+        run: pnpm add -D file:../eslint-config && pnpm upgrade --latest eslint
 
       - name: Run ESLint
         continue-on-error: true
