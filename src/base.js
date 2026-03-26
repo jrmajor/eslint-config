@@ -7,6 +7,11 @@ export default defineConfig([
 			reportUnusedInlineConfigs: 'warn',
 			reportUnusedDisableDirectives: 'warn',
 		},
+		rules: {
+			'@stylistic/eol-last': 'warn',
+			'@stylistic/linebreak-style': 'warn',
+			'@stylistic/no-trailing-spaces': 'warn',
+		},
 	},
 	globalIgnores([
 		'vendor',
