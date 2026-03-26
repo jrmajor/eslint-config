@@ -5,7 +5,7 @@
 	"author": "Jeremiasz Major <jrh.mjr@gmail.com>",
 	"repository": "jrmajor/eslint-config",
 	"type": "module",
-	"packageManager": "pnpm@10.17.1",
+	"packageManager": "pnpm@10.33.0",
 	"files": [
 		"src"
 	],
@@ -33,7 +33,7 @@
 	},
 	"devDependencies": {
 		"@eslint/config-inspector": "^1.3",
-		"@types/node": "^22.18",
+		"@types/node": "^24.12",
 		"eslint": "^9.37",
 		"globals": "^16.4",
 		"svelte": "*",
@@ -45,7 +45,7 @@
 	"devEngines": {
 		"packageManager": {
 			"name": "pnpm",
-			"version": "10.17.1"
+			"version": "10.33.0"
 		}
 	}
 }

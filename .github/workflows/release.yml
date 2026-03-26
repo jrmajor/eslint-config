@@ -13,19 +13,16 @@ jobs:
       id-token: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v5
+        with:
+          cache: true
+          run_install: true
 
       - name: Setup Node
-        uses: actions/setup-node@v5
-        with:
-          node-version: 22.20.0
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: Install npm dependencies
-        run: pnpm install
+        run: pnpm env use --global 24
 
       - name: Publish release
         run: pnpm publish --no-git-checks --access public

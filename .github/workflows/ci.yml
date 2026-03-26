@@ -11,18 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v5
+        with:
+          cache: true
+          run_install: true
 
       - name: Setup Node
-        uses: actions/setup-node@v5
-        with:
-          node-version: 22.20.0
-
-      - name: Install npm dependencies
-        run: pnpm install
+        run: pnpm env use --global 24
 
       - name: Check types
         run: pnpm check
@@ -32,18 +30,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v5
+        with:
+          cache: true
+          run_install: true
 
       - name: Setup Node
-        uses: actions/setup-node@v5
-        with:
-          node-version: 22.20.0
-
-      - name: Install npm dependencies
-        run: pnpm install
+        run: pnpm env use --global 24
 
       - name: Run ESLint
         run: pnpm lint
@@ -59,20 +55,22 @@ jobs:
           - bajki-muza
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           path: eslint-config
 
       - name: Checkout the other repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: jrmajor/${{ matrix.project }}
           path: integration
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v5
         with:
+          cache: true
           package_json_file: integration/package.json
+          cache_dependency_path: integration/pnpm-lock.yaml
 
       - name: Install npm dependencies
         working-directory: integration
