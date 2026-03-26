@@ -30,7 +30,6 @@ export const jsConfig = defineConfig({
 		'no-unassigned-vars': 'warn',
 		'no-underscore-dangle': 'error',
 		'no-unneeded-ternary': 'warn',
-		'no-unused-expressions': ['warn', { allowTernary: true }],
 		'no-useless-concat': 'warn',
 		'no-useless-constructor': 'warn',
 		'no-useless-rename': 'error',
