@@ -7,7 +7,6 @@ export default defineConfig([
 		name: 'jrmajor/css',
 		files: ['**/*.css'],
 		language: 'css/css',
-		// @ts-expect-error
 		plugins: { css },
 		languageOptions: {
 			customSyntax: tailwind4,
