@@ -1,3 +1,4 @@
+import stylistic from '@stylistic/eslint-plugin';
 import { defineConfig, globalIgnores } from 'eslint/config';
 
 export default defineConfig([
@@ -6,6 +7,9 @@ export default defineConfig([
 		linterOptions: {
 			reportUnusedInlineConfigs: 'warn',
 			reportUnusedDisableDirectives: 'warn',
+		},
+		plugins: {
+			'@stylistic': stylistic,
 		},
 		rules: {
 			'@stylistic/eol-last': 'warn',

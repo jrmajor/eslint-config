@@ -1,11 +1,7 @@
-import stylistic from '@stylistic/eslint-plugin';
 import { defineConfig } from 'eslint/config';
 
 export const stylisticConfig = defineConfig({
 	name: 'stylistic',
-	plugins: {
-		'@stylistic': stylistic,
-	},
 	rules: {
 		'@stylistic/array-bracket-spacing': 'warn',
 		'@stylistic/arrow-parens': 'warn',
