@@ -6,7 +6,6 @@ import { orderConfig } from './order.js';
 export const importsConfig = defineConfig({
 	name: 'imports',
 	extends: [
-		// @ts-expect-error
 		importX.flatConfigs.typescript,
 	],
 	rules: {

@@ -27,7 +27,6 @@ export const jsConfig = defineConfig({
 		'no-negated-condition': 'warn',
 		'no-shadow-restricted-names': 'error',
 		'no-throw-literal': 'error',
-		'no-unassigned-vars': 'warn',
 		'no-underscore-dangle': 'error',
 		'no-unneeded-ternary': 'warn',
 		'no-useless-concat': 'warn',
