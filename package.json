@@ -22,7 +22,7 @@
 		"inspect-config": "config-inspector --config testConfig.js"
 	},
 	"dependencies": {
-		"@eslint/css": "^1.0",
+		"@eslint/css": "^1.1",
 		"@eslint/js": "^10.0",
 		"@stylistic/eslint-plugin": "^5.10",
 		"eslint-import-resolver-next": "^0.6.0",
