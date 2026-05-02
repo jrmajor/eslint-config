@@ -22,19 +22,19 @@
 		"inspect-config": "config-inspector --config testConfig.js"
 	},
 	"dependencies": {
-		"@eslint/css": "^1.0",
+		"@eslint/css": "^1.2",
 		"@eslint/js": "^10.0",
 		"@stylistic/eslint-plugin": "^5.10",
 		"eslint-import-resolver-next": "^0.6.0",
 		"eslint-plugin-import-x": "^4.16",
 		"eslint-plugin-svelte": "^3.16",
-		"tailwind-csstree": "^0.3.0",
+		"tailwind-csstree": "^0.3.1",
 		"typescript-eslint": "^8.57"
 	},
 	"devDependencies": {
 		"@eslint/config-inspector": "^1.5",
 		"@types/node": "^24.12",
-		"eslint": "^10.1",
+		"eslint": "^10.3",
 		"globals": "*",
 		"svelte": "*",
 		"typescript": "^5.9"
