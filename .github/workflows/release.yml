@@ -2,7 +2,11 @@ name: Release
 
 on:
   push:
-    tags: ['v0.*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Tag to publish (e.g. v0.4.0)
+        required: true
 
 jobs:
   release:
@@ -11,9 +15,21 @@ jobs:
     permissions:
       contents: read
       id-token: write
+    env:
+      # empty on branch pushes, which makes this a dry run
+      TAG: ${{ inputs.tag || (github.ref_type == 'tag' && github.ref_name) || '' }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
+        with:
+          ref: ${{ env.TAG || github.sha }}
+          fetch-depth: 0
+
+      - name: Check the tag
+        if: env.TAG != ''
+        run: |
+          git merge-base --is-ancestor HEAD origin/main || { echo "$TAG is not on main"; exit 1; }
+          [ "v$(jq -r .version package.json)" = "$TAG" ] || { echo "package.json version does not match $TAG"; exit 1; }
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v5
@@ -27,5 +43,5 @@ jobs:
           node-version: 24
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Publish release
-        run: pnpm publish --no-git-checks --access public
+      - name: Publish
+        run: pnpm publish --no-git-checks --access public ${{ env.TAG == '' && '--dry-run' || '' }}
