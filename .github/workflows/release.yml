@@ -45,7 +45,9 @@ jobs:
 
       - name: Use an unpublished version for the dry run
         if: env.TAG == ''
-        run: npm version --no-git-tag-version "$(jq -r .version package.json)-dry-run.${GITHUB_SHA::7}"
+        run: |
+          jq --arg sha "${GITHUB_SHA::7}" '.version += "-dry-run." + $sha' package.json > package.tmp.json
+          mv package.tmp.json package.json
 
       - name: Publish
         run: pnpm publish --no-git-checks --access public ${{ env.TAG == '' && '--dry-run --tag dry-run' || '' }}
