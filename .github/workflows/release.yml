@@ -43,5 +43,9 @@ jobs:
           node-version: 24
           registry-url: 'https://registry.npmjs.org'
 
+      - name: Use an unpublished version for the dry run
+        if: env.TAG == ''
+        run: npm version --no-git-tag-version "$(jq -r .version package.json)-dry-run.${GITHUB_SHA::7}"
+
       - name: Publish
-        run: pnpm publish --no-git-checks --access public ${{ env.TAG == '' && '--dry-run' || '' }}
+        run: pnpm publish --no-git-checks --access public ${{ env.TAG == '' && '--dry-run --tag dry-run' || '' }}
